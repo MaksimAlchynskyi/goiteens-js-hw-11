@@ -55,3 +55,20 @@ return string
     }
 }
 console.log(formatString('ак от, усі людські пристрасті , розпалені зіткненнями інтересів у вашому нинішньому суспільстві, проходять переді мною, і я влаштовую їм огляд, а сам живу спокійно.'));
+
+// Завдання 5
+// Напиши функцію checkForSpam(message), приймаючу 1 параметр message — рядок. Функція перевіряє
+//  її на вміст слів spam і sale. Якщо знайшли заборонене слово, то функція повертає true, якщо заборонених 
+// слів немає функція повертає false. Слова в рядку можуть бути в довільному регістрі.
+
+
+function checkForSpam (message, _messageone, _messageTwo, _messageThree) {
+    const checkMessage = message.toLowerCase();
+    if (checkMessage.includes('spam') || checkMessage.includes('sale')) {
+      return true;
+    }
+    return false;
+  };
+  console.log(checkForSpam("Це повідомлення без заборонених слів."));
+  console.log(checkForSpam("Це повідомлення з словом sale."));
+  console.log(checkForSpam("Це повідомлення з словом spam."));
